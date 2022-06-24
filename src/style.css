@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(#2980b9, #2c3e50);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    animation: Animation .8s;
+}
+
+.title{
+    font-size: 6rem;
+}
+
+.containerInput{
+    background-color: rgb(0, 0, 0, 0.5);
+    margin: 30px;
+    padding: 15px;
+    display: flex;
+    border-radius: 8px; 
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.containerInput input::placeholder{
+    color: white;
+}
+
+.btnSearch{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btnSearch:hover{
+    transform: scale(1.2);
+}
+
+.main{
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    animation: Animation .8s;
+}
+
+.main h2{
+    padding-bottom: 5px;
+}
+
+.main span{
+    padding: 5px;
+    font-weight: bold;
+}
+
+@keyframes Animation{
+    0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+}
+
+@media (max-width: 450px){
+    .container h1{
+        font-size: 4em;
+    }
+    .main{
+        min-width: 80%;
+    }
+}
